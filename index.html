@@ -5,18 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fundamentos</title>
     <style>
+        html {
+            scroll-behavior: smooth;
+        }
         body {
             font-family: Arial, sans-serif;
         }
 
-        header {
+        header, footer {
             background-color: #c3c3c3;
             padding: 15px;
             margin: 10px;
             text-align: center;
         }
 
-        section, .tipos {
+        section, .tipos, .formulario {
             background-color: #dddddd;
             padding: 15px;
             margin: 10px;
@@ -51,6 +54,10 @@
             height: auto;
             object-fit: contain;
         }
+
+        .operadores {
+            height: 300px;
+        }
     </style>
 </head>
 <body>
@@ -64,27 +71,178 @@
         </div>
         
         <div class="content">
-            <section id="conteudo">
-                <h2>O que são as operações lógicas dentro da Álgebra Booleana?</h2>
-                <p>
-                    As operações lógicas dentro da Álgebra Booleana são regras usadas para
-                    combinar ou modificar valores lógicos, que só podem ser verdadeiro (1) 
-                    ou falso (0). Elas servem para analisar condições e tomar decisões em áreas 
-                    como programação, matemática e circuitos digitais. Essas operações 
-                    funcionam como “operações matemáticas”, mas em vez de trabalhar com 
-                    números comuns, trabalham com valores de verdade.
-                </p>
+            <section id="conteudo_a">
+                <ul>   
+                    <li>
+                        <h2>O que são as operações lógicas dentro da Álgebra Booleana?</h2>
+                        <p>
+                            As operações lógicas dentro da Álgebra Booleana são regras usadas para
+                            combinar ou modificar valores lógicos, que só podem ser verdadeiro (1) 
+                            ou falso (0). Elas servem para analisar condições e tomar decisões em áreas 
+                            como programação, matemática e circuitos digitais. Essas operações 
+                            funcionam como “operações matemáticas”, mas em vez de trabalhar com 
+                            números comuns, trabalham com valores de verdade.
+                        </p>
+                    </li>
+
+                    <li>
+                        <h2>Aplicações em computação e eletrônica</h2>
+                        <p>
+                            A Álgebra Booleana é a base da computação digital, sendo usada para criar circuitos lógicos, como portas AND, OR, XOR e NOT, que formam os processadores e memórias dos computadores. Além disso, ela é fundamental em programação, principalmente em estruturas de decisão, filtros, validações e algoritmos que dependem de condições lógicas. Sua capacidade de representar decisões complexas com apenas valores verdadeiro/falso torna-a indispensável em tecnologia.
+                        </p>
+                    </li>
+
+                    <li>
+                        <h2>Clique nos botões ao lado e descubra a funcão de cada operador lógico</h2>
+                        <img src="/images/OPERADORES.png" alt="operadores" class="operadores">
+                    </li>
+                </ul>
             </section>
+            
 
             <div class="tipos">
                 <h3 style="margin: 10px;">Operadores Lógicos</h3>
-                <a class="botao" href="#AND">
-                    <img src="AND.png" alt="and" class="icone">
+                <a class="botao" href="#AND" target="_self">
+                    <img src="/images/AND.png" alt="and" class="icone">
                 </a>
+                <a class="botao" href="#OR">
+                    <img src="/images/OR.png" alt="and" class="icone">
+                </a>
+                <a class="botao" href="#NOT">
+                    <img src="/images/NOT.png" alt="and" class="icone">
+                </a>
+                <a class="botao" href="#XOR">
+                    <img src="/images/XOR.png" alt="and" class="icone">
+                </a>
+                <a class="botao" href="#XNOR">
+                    <img src="/images/XNOR.png" alt="and" class="icone">
+                </a>
+                <a class="botao" href="#NAND">
+                    <img src="/images/NAND.png" alt="and" class="icone">
+                </a>
+                <a class="botao" href="#NOR">
+                    <img src="/images/NOR.png" alt="and" class="icone">
+                </a>
+
             </div>
         </div>
 
+        <section id="AND">
+            <h2>AND (E)</h2>
+            <p>O operador AND só retorna verdadeiro quando todas as entradas são verdadeiras. Se qualquer entrada for falsa, o resultado será falso.</p>
+            <p><b>Exemplo no cotidiano:</b></p>
+            <li style="margin-left: 15px;">Um sistema de segurança pode usar: “Alarme toca se porta aberta E janela aberta”.</li>
+            <ul>
+                <li>Porta aberta = 1, Janela aberta = 0 → resultado: 0 (não toca)</li>
+                <li>Porta aberta = 1, Janela aberta = 1 → resultado: 1 (toca)</li>
+            </ul>
+        </section>
+
+        <section id="OR">
+            <h2>OR (OU)</h2>
+            <p>O operador OR retorna verdadeiro se pelo menos uma entrada for verdadeira. Ele só retorna falso quando todas as entradas forem falsas.</p>
+            <p><b>Exemplo no cotidiano:</b></p>
+            <li style="margin-left: 15px;">Uma lâmpada que acende se sensor A OU sensor B detectar movimento.</li>
+            <ul>
+                <li>A detecta movimento = 0, B detecta = 1 → resultado: 1 (liga a lâmpada)</li>
+                <li>A detecta = 0, B detecta = 0 → resultado: 0 (não liga)</li>
+            </ul>
+        </section>
+
+        <section id="NOT">
+            <h2>NOT (NÃO)</h2>
+            <p>O operador NOT inverte o valor lógico: verdadeiro vira falso e falso vira verdadeiro.</p>
+            <p><b>Exemplo no cotidiano:</b></p>
+            <li style="margin-left: 15px;">Um sistema de iluminação: “Acender luz se não estiver de dia.”</li>
+            <ul>
+                <li>Dia = 1 → NOT dia = 0 (não acende)</li>
+                <li>Dia = 0 → NOT dia = 1 (acende)</li>
+            </ul>
+        </section>
+
+        <section id="NAND">
+            <h2>NAND (NÃO E)</h2>
+            <p>O operador NAND é a negação do AND. Ele retorna verdadeiro sempre que o AND seria falso e retorna falso apenas quando todas as entradas são verdadeiras.</p>
+            <p><b>Exemplo no cotidiano:</b></p>
+            <li style="margin-left: 15px;">Um alarme que desliga se todas as portas e janelas estiverem fechadas.</li>
+            <ul>
+                <li>Porta fechada = 1, Janela fechada = 1 → AND = 1 → NAND = 0 (não dispara)</li>
+                <li>Porta aberta = 1, Janela fechada = 1 → AND = 0 → NAND = 1 (dispara)</li>
+            </ul>
+        </section>
+
+        <section id="NOR">
+            <h2>NOR (NÃO OU)</h2>
+            <p>O operador NOR é a negação do OR. Ele retorna verdadeiro somente quando todas as entradas forem falsas.</p>
+            <p><b>Exemplo no cotidiano:</b></p>
+            <li style="margin-left: 15px;">Um sistema de alarme: “Alarme dispara apenas se nenhum sensor detectar movimento.”</li>
+            <ul>
+                <li>Sensor A = 0, Sensor B = 0 → NOR = 1 (dispara)</li>
+                <li>Sensor A = 1, Sensor B = 0 → NOR = 0 (não dispara)</li>
+            </ul>
+        </section>
+
+        <section id="XOR">
+            <h2>XOR (OU Exclusivo)</h2>
+            <p>O operador XOR retorna verdadeiro somente se uma entrada for verdadeira e a outra falsa. Se ambas forem iguais, retorna falso.</p>
+            <p><b>Exemplo no cotidiano:</b></p>
+            <li style="margin-left: 15px;">Luz de escada com dois interruptores: a luz acende se apenas um dos interruptores estiver ligado.</li>
+            <ul>
+                <li>Interruptor 1 ligado, Interruptor 2 desligado → XOR = 1 (acende)</li>
+                <li>Ambos ligados → XOR = 0 (não acende)</li>
+            </ul>
+        </section>
+
+        <section id="XNOR">
+            <h2>XNOR (OU Exclusivo Negado)</h2>
+            <p>O operador XNOR é o inverso do XOR. Ele retorna verdadeiro quando as entradas são iguais e falso quando são diferentes.</p>
+            <p><b>Exemplo no cotidiano:</b></p>
+            <li style="margin-left: 15px;">Comparador de senha: “A senha digitada deve ser igual à senha correta.”</li>
+            <ul>
+                <li>Digitada = correta → XNOR = 1 (válido)</li>
+                <li>Digitada ≠ correta → XNOR = 0 (inválido)</li>
+            </ul>
+        </section>
+
         
     </div>
+
+    <div class="formulario">
+
+        <form>
+            <fieldset>
+                <legend>Deixe sua avaliação</legend>
+                
+                <label for="nome">Nome:</label><br>
+                <input type="text"><br><br>
+                
+                
+                <label for="notaExplicacao">Como avalia a explicação (1-5):</label>
+                <select id="notaExplicacao">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                </select><br><br>
+                
+                            
+                <label for="mensagem">Deixe uma mensagem adicional:</label><br>
+                <textarea name="mensagem" rows="5" cols="30"></textarea><br><br>
+                            
+                <input type="submit" value="Enviar">                
+            </fieldset>
+        </form>
+    </div>
+
+    <div id="footer">
+        <footer>
+        <h1>Obrigado</h1>
+        <h2>JOÃO PAULO CAMPIOLO ALMEIDA</h2>
+        <h2>ESOFT - NOTURNO = 3º SEMESTRE - SALA C</h2>
+        <h2>R.A.:25001140-2</h2>
+        </footer>
+    </div>
+
 </body>
 </html>
