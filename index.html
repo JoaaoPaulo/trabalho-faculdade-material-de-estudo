@@ -1,1 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
 
+        header {
+            background-color: #c3c3c3;
+            padding: 15px;
+            margin: 10px;
+            text-align: center;
+        }
+
+        section, .tipos {
+            background-color: #dddddd;
+            padding: 15px;
+            margin: 10px;
+        }
+
+        .tipos {
+            padding: 0;
+        }
+
+        .content {
+            display: flex;
+        }
+
+        .botao {
+            background-color: #a0a0a0;
+            margin: 10px;
+            display: block;
+            width: 80px;
+            height: 80px;
+            border-radius: 8%;
+            overflow: hidden;
+            border: 2px solid black;
+            box-sizing: border-box;
+        }
+
+        .botao:hover {
+            transform: scale(1.05);
+        }
+
+        .icone {
+            width: 100%;
+            height: auto;
+            object-fit: contain;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+
+        <div id="header">
+            <header>
+                <h1>Fundamentos e Arquitetura de Computadores</h1>
+                <p>Álgebra Booleana e seus operadores lógicos.</p>
+            </header>
+        </div>
+        
+        <div class="content">
+            <section id="conteudo">
+                <h2>O que são as operações lógicas dentro da Álgebra Booleana?</h2>
+                <p>
+                    As operações lógicas dentro da Álgebra Booleana são regras usadas para
+                    combinar ou modificar valores lógicos, que só podem ser verdadeiro (1) 
+                    ou falso (0). Elas servem para analisar condições e tomar decisões em áreas 
+                    como programação, matemática e circuitos digitais. Essas operações 
+                    funcionam como “operações matemáticas”, mas em vez de trabalhar com 
+                    números comuns, trabalham com valores de verdade.
+                </p>
+            </section>
+
+            <div class="tipos">
+                <h3 style="margin: 10px;">Operadores Lógicos</h3>
+                <a class="botao" href="#AND">
+                    <img src="AND.png" alt="and" class="icone">
+                </a>
+            </div>
+        </div>
+
+        
+    </div>
+</body>
+</html>
